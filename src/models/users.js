@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const jwt = require("jsonwebtoken");
+const Quotes = require("./quotes");
 
 //model for the user
 const userSchema = new mongoose.Schema({
@@ -15,6 +16,11 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true,
     minlength: 7,
+  },
+  quotesaccessed:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:Quotes,
+    required:true
   },
   role: [
     {

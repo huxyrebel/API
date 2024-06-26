@@ -20,12 +20,6 @@ const quotesSchema=new mongoose.Schema({
         ref:Category,
         required:true
     },
-    //refrencing that which user accessed these quotes
-    user:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:User,
-        required:true
-    }
 })
 
 const Quotes=new mongoose.Model('Quotes',quotesSchema)
