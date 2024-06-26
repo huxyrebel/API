@@ -17,11 +17,6 @@ const userSchema = new mongoose.Schema({
     unique: true,
     minlength: 7,
   },
-  quotesaccessed:{
-    type:mongoose.Schema.Types.ObjectId,
-    ref:Quotes,
-    required:true
-  },
   role: [
     {
       type: String,

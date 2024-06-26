@@ -1,7 +1,6 @@
 const mongoose=require("mongoose")
 const Category=require('./categories')
 const User = require("./users")
-const { type } = require("os")
 
 //model for the quotes
 const quotesSchema=new mongoose.Schema({
