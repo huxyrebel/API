@@ -17,6 +17,7 @@ const userSchema = new mongoose.Schema({
     unique: true,
     minlength: 7,
   },
+  //this will show that these are the quotes accessed by this user
   quotesaccessed:{
     type:mongoose.Schema.Types.ObjectId,
     ref:Quotes,
