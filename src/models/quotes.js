@@ -1,9 +1,11 @@
 const mongoose=require("mongoose")
 const Category=require('./categories')
+const User = require("./users")
+const { type } = require("os")
 
 //model for the quotes
 const quotesSchema=new mongoose.Schema({
-    text:{
+    quote:{
         type:String,
         required:true
 
@@ -16,6 +18,12 @@ const quotesSchema=new mongoose.Schema({
     category:{
         type:mongoose.Schema.Types.ObjectId,
         ref:Category,
+        required:true
+    },
+    //refrencing that which user accessed these quotes
+    user:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:User,
         required:true
     }
 })

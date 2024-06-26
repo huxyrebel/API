@@ -18,5 +18,5 @@ app.listen(port, () => {
 });
 
 const User = require("./models/users");
-const Category=require('./models/categories')
-const Quotes=require('./models/quotes')
+const Category = require("./models/categories");
+const Quotes = require("./models/quotes");
